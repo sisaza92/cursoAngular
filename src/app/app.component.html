@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1 appColorDirective>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+
+<!-- uso de interpolación -->
+<h1>{{nombre}}</h1>
+
+<!-- Inicio Ejemplo de uso de ngIf -->
+<input type="text"  (ngModelChange)="onDirectiveClicked($event)" *ngIf="variable">
+<button (click)="changeVariable()">Cambiar Variable</button>
+{{variable}}
+<!-- Fin ejemplo de uso ngIf -->
+
+<!-- Inicio de ejemplo de uso de ngFor -->
+<div *ngFor="let person of miArreglo">
+  <p>{{person.name + " " +person.last}}</p>
+</div>
+<!-- Fin de ejemplo de uso de ngFor -->
+
+<!-- Inicio de ejemplo de uso de Formularios -->
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+  <h3>Uso de Formularios</h3>
+  <input type="text" placeholder="Name" formControlName="name">
+  <input type="text" placeholder="Last" formControlName="last">
+  <input type="text" placeholder="Age" formControlName="age">
+
+  <button type="submit" [disabled]="personForm.invalid">Send</button>
+</form>
+<button type="submit" (click)="fillForm()">fill</button>
+<!-- Fin de ejemplo de uso de Formularios -->
+
+<!-- Inicio de ejemplo de uso de Formularios con Servicio -->
+<form [formGroup]="formService" (ngSubmit)="onSubmitPost()">
+    <h3>Uso de Formularios con Servicio</h3>
+  <input type="text" placeholder="userId" formControlName="userId">
+  <input type="text" placeholder="id" formControlName="id">
+  <input type="text" placeholder="title" formControlName="title">
+
+  <button type="submit" [disabled]="formService.invalid">Send</button>
+</form>
+<!-- Fin de ejemplo de uso de Formularios con Servicio -->
