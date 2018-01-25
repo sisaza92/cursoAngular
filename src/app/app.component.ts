@@ -59,7 +59,7 @@ export class AppComponent {
   }
 
   // método que ejecuta el submit del formulario formsService, 
-  // kllama al servicio y decide que hacer 
+  // llama al servicio y decide que hacer 
   // si la respuesta es ok o error
   onSubmitPost() {
     this.serv.sendPost(this.formService.value).subscribe(

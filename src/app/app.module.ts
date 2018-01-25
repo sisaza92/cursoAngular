@@ -21,8 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ReactiveFormsModule, // necesario para el uso de formularios
+    HttpClientModule // necesario para el uso de servicios
 
   ],
   providers: [ServiciocarpetaService],

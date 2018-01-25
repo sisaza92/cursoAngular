@@ -13,8 +13,8 @@ export class ServiciocarpetaService {
   // inyección de httpClient
   constructor(private httpClient: HttpClient) { }
 
-  // Método que ejecuta el método post del servicio expuesto en BASE_URL
-  sendPost(body: any): Observable<any> {
-   return  this.httpClient.post(BASE_URL + this.post_uri, body);
+  // Método que ejecuta el post del servicio expuesto en BASE_URL
+  sendPost(jsonEnviado: any): Observable<any> {
+   return  this.httpClient.post(BASE_URL + this.post_uri, jsonEnviado);
   }
 }
