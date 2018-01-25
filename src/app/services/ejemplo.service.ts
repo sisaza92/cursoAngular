@@ -4,8 +4,9 @@ import { BASE_URL } from '../../environments/environment';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class ServiciocarpetaService {
+export class EjemploService {
 
+  
   //constante con el método a ejecutar en el servicio
   readonly post_uri: string = 'posts';
 
@@ -17,4 +18,5 @@ export class ServiciocarpetaService {
   sendPost(jsonEnviado: any): Observable<any> {
    return  this.httpClient.post(BASE_URL + this.post_uri, jsonEnviado);
   }
+
 }

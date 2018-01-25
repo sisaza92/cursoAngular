@@ -2,21 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 
-import { AppComponent } from './app.component';
-import { ColorDirectiveDirective } from './color-directive.directive';
-import { NamePipe } from './name.pipe';
-import { NuevoPipePipe } from './nuevo-pipe.pipe';
+import { AppComponent } from './components/app.component';
+import { ColorDirectiveDirective } from './directives/color-directive.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ServiciocarpetaService } from './services/serviciocarpeta.service';
 import { HttpClientModule } from '@angular/common/http';
+import { EjemploService } from './services/ejemplo.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorDirectiveDirective,
-    NamePipe,
-    NuevoPipePipe
+    ColorDirectiveDirective
   ],
   imports: [
     BrowserModule,
@@ -25,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule // necesario para el uso de servicios
 
   ],
-  providers: [ServiciocarpetaService],
+  providers: [EjemploService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

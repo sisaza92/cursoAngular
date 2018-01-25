@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { ServiciocarpetaService } from './services/serviciocarpeta.service';
+import { EjemploService } from '../services/ejemplo.service';
 
 
 @Component({
@@ -34,7 +34,7 @@ export class AppComponent {
   ];
 
   // inyección de dependencias en el constructor e inicialización de formularios
-  constructor(private fb: FormBuilder, private serv: ServiciocarpetaService) {
+  constructor(private fb: FormBuilder, private serv: EjemploService) {
     this.initForms();
   }
 
